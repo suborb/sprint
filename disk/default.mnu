@@ -1,0 +1,26 @@
+[MENU]
+title=SPRINTER
+menucolor=1
+barcolor=11
+menuitem=Flex Navigator, fn.exe
+menuitem=< DEMO >, menu.exe default.mnu#DEMO
+menuitem=B_CODE text windows, b_code.exe
+menuitem=CPM Emulator, cpm\cpmemul.exe cpm\xccp.com
+menuitem=FORTH programming, forth.exe
+menuitem=FRACTALS Visualizator, fractals.exe
+menuitem=Just Another TETRIS, tetris.exe
+menuitem=MAPGEN for RW1, mapgen.exe
+
+[DEMO]
+title=DEMO Programs
+menucolor=9
+barcolor=10
+menuitem=256COLOR, 256color.exe
+menuitem=FAN256, fan256.exe
+menuitem=FISH, fish.exe
+menuitem=FLAMES, flames.exe
+menuitem=PSY, psy.exe
+menuitem=SD, sd.exe
+menuitem=STARWAY, starway.exe
+
+[END]

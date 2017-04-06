@@ -1,0 +1,141 @@
+# Sprint Emulator
+
+This is a 64 bit compatible, works on a Mac version of the Sprinter
+emulator.
+
+Keyboard mapping tables taken from: https://github.com/depp/keycode
+
+
+
+      *** SPRINT - Emulator of SPRINTER computer ***
+
+                 18.02.2002 - 24.05.2003
+
+            http://shaos.ru/nedopc/sprinter/
+           http://www.petersplus.com/sprinter/
+
+-----------------------------------------------------------
+This is NOT release! This is snapshot of my work directory!
+Russia, Ekaterinburg, Alexander Shabarshin (shaos@mail.ru).
+Latest version:  http://shaos.ru/pub/sprint.rar (~1M)
+-----------------------------------------------------------
+
+SPRINT is free software; you can redistribute it and/or 
+modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation; 
+either version 2 of the License, or (at your option) any 
+later version.
+
+SPRINT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty 
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public 
+License along with SPRINT; if not, write to the Free 
+Software Foundation, Inc., 59 Temple Place, Suite 330, 
+Boston, MA  02111-1307 USA
+
+
+1. WHAT IS SPRINT
+
+SPRINT is emulator of Sprinter (flex computer with z80
+processor, see http://www.petersplus.com for details).
+We emulate OS Estex as interface to real OS of emulator.
+We don't emulate SPECTRUM mode yet, but it's possible in
+the future. We developed this project in C++ for using
+object-oriented technique and portability. 
+
+Default video mode is 640x480 with 256 colors. If you
+have any problems with this mode, edit SPRINT.INI file.
+Now you may use windowed mode for SDL version of SPRINT.
+Developed for  WIN9X (SDL+DirectX), MS-DOS (DOS4GW), 
+LINUX (svgalib) and LINUX (SDL+X11).
+
+We used SDL library v1.2.4 for Windows and v1.0.8 for
+Linux (see http://www.libsdl.org).
+
+
+2. START
+
+Variants of start:
+
+sprint_fn (or sprint fn.exe)
+sprint_menu (or sprint menu.exe)
+sprint fan256.exe
+sprint fish.exe
+sprint flames.exe
+sprint forth.exe
+sprint psy.exe
+sprint sd.exe
+sprint starway.exe
+cpm
+
+SPRINT.EXE - for Windows + SDL (SDL.dll included)
+sprint - for Linux + SDL (X11 and libSDL needed)
+sprintvga - for Linux + svgalib (svgalib needed)
+
+During emulation SPRINT fills DEBUG.OUT file.
+It's disassembled trace of Z80 processor and
+it may be really big! See SPRINT.INI for on/off.
+
+F2 - Save 64K memory to memory.dat file;
+F9 - Save screenshot in Targa format (TGA);
+F10 - End of work.
+
+
+3. SUPPORTED FUNCTIONS
+
+At present, a number of supported functions is not
+too big, namely:
+
+Accelerator: all
+
+Bios  (RST #08): 
+#81,#82,#83,#84,#85,#86,#87,#88,#89,#8A,#8B,#8C,#8D,#8E,
+#A1,#A4,#C0,#C1,#C2,#C3,#C4,#C5,#C6,#C7,#EF
+
+Estex (RST #10): 
+#01,#02,#0A,#0B,
+#11,#12,#13,#14,#15,#19,#1A,#1D,#1E,#21,
+#30,#31,#32,#33,#35,#37,#38,#39,#3A,#3B,#3C,#3D,#3E,
+#40,#41,
+#50,#51,#52,#53,#54,#55,#56,#57,#58,#59,#5A,#5B,#5C
+else jump to real SYSTEM.DOS
+
+Mouse (RST #30): 
+#00,#03
+
+
+4. HOW TO HELP US
+
+If you want develope unsupported function of bios or estex,
+please try develop it and send it to us. 
+
+If you want modify supported function and think that it's
+good modification or bugfix, that you need contact us for
+discussing of your modifications.
+
+For compiling we used:
+- Makefile for GCC under Linux and SDL (X11);
+- Makefile.vga for GCC under Linux and svgalib;
+- MK.BAT for Watcom-C/C++ under MS-DOS + DOS4GW;
+- C_MK.BAT for Visual-C++ 6.0 under Windows + SDL;
+Don't forget to edit C_SDL.BAT and MK.BAT for your system!
+
+
+-----------------------------------------------------------
+
+Authors:
+
+* Alexander Shabarshin <shaos@mail.ru>
+  Emulation of Sprinter computer
+
+* PETERS Plus Ltd. <sprinter@petersplus.ru>
+  Estex OS interface description and SYSTEM.DOS
+
+* Philip Kendall <pak21-fuse@srcf.ucam.org> 
+  Emulation of Z80 processor (from FUSE emulator)
+
+* May be YOU ;)
+
